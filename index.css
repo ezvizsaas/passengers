@@ -1,0 +1,663 @@
+body {
+    width: 100%;
+    background-color: #f0f0f3;
+}
+.main{
+    width: 100%;
+}
+._page_ {
+    width: 100%;
+}
+._page_.groupSubPage{
+    position: absolute;
+    top: .44rem;
+    background: rgba(0,0,0,.85);
+    height: 100%;
+}
+/*********图表页面***********/
+
+.head {
+    height: .44rem;
+    border-bottom: 1px solid #b2b2b2;
+    z-index: 100;
+    background: #fff;
+}
+.head p {
+    color: #555;
+    font-size: .15rem;
+    line-height: .44rem;
+    height: .44rem;
+}
+.head .arrow1 {
+    height: .44rem;
+    width: .35rem;
+    position: relative;
+}
+.head .arrow1 span {
+    display: block;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.21rem;
+    background-size: auto .21rem;
+    height: .24rem;
+    width: .24rem;
+    left: .04rem;
+    top: .08rem;
+    position: absolute;
+    -webkit-transition: all .3s ease-in-out;
+}
+.head .arrow1.open span{
+    -webkit-transform :rotate(-90deg);
+}
+.head .arrow2 {} .head .arrow2 span {
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat;
+    background-size: 50%;
+    background-position: 18px;
+}
+.head .search {
+    height: .44rem;
+    width: .44rem;
+    position: relative;
+    color:;
+}
+.head .search span {
+    display: block;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: 0rem;
+    background-size: auto .21rem;
+    height: .24rem;
+    width: .24rem;
+    top: .09rem;
+    left: .09rem;
+    position: absolute;
+}
+.content {
+} .banner {
+    height: 1.85rem;
+    background: #f37f4c;
+    position: relative;
+}
+.banner p {
+    position: absolute;
+    color: #fff;
+    margin: .1rem auto;
+}
+.banner .banner-slide {
+    height: 1.6rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.banner .slide-arrow {
+    height: .24rem;
+    top: .75rem;
+    position: absolute;
+    padding: .13rem 0;
+    width: .7rem;
+}
+.banner .slide-arrow i {
+    display: block;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.65rem;
+    background-size: auto .21rem;
+    height: .24rem;
+    width: .24rem;
+    top: .13rem;
+    position: absolute;
+}
+.banner .slide-arrow p {
+    line-height: .24rem;
+    font-size: .12rem;
+}
+.banner .slide-pre {} .banner .slide-pre p {
+    margin: 0 0 0 .24rem;
+    float: left;
+}
+.banner .slide-pre i {
+    float: left;
+}
+.banner .slide-next {
+    right: 0;
+}
+.banner .slide-next p {
+    right: 0;
+    margin: 0 .24rem 0 0;
+}
+.banner .slide-next i {
+    float: right;
+    right: 0;
+    -webkit-transform:rotate(180deg);
+}
+.banner-slide{
+    overflow: hidden;
+}
+.banner-slide .slide-day div{
+position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.6rem;
+  width: 100%;
+}
+.banner-slide .slide-day p {
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+.banner-slide .slide-day .day-flow-count {
+      text-align: center;
+  width: 100%;
+  margin: .35rem auto;
+  font-size: .5rem;
+}
+.banner-slide .slide-day .day-flow-date {
+      position: absolute;
+  top: 0.9rem;
+  width: 100%;
+  text-align: center;
+  font-size: .13rem;
+}
+.banner-tip1 {
+    left: .1rem;
+}
+.banner-tip2 {
+    right: .1rem;
+}
+.graph {}
+.graph-top {
+    height: 20px;
+    margin-top: .1rem;
+}
+.graph-top-tips {
+    margin: 0 .05rem;
+}
+.graph-top-tips i {
+    display: block;
+    font-size: 16px;
+    margin: 0 .05rem 0 0;
+    font-weight: bold;
+}
+.graph-top-tips i span.icon-point{
+    display: inline-block;
+    font-size: 20px;
+    height: 6px;
+    width: 6px;
+    border-radius: 6px;
+    margin: 7px 1px;
+}
+.graph-top-tips i span.icon-bar{
+    display: inline-block;
+    font-size: 20px;
+    height: 2px;
+    width: 6px;
+    margin: 9px 0;
+}
+.graph-top-tips i.graph-icon-1 span.icon-point{
+    background-color: #f37f4c;
+}
+.graph-top-tips i.graph-icon-1 span.icon-bar{
+    background-color: #f37f4c;
+}
+.graph-top-tips i.graph-icon-2 span.icon-point{
+    border-radius: 0px;
+    background-color: #3d9ed9;
+}
+.graph-top-tips i.graph-icon-2 span.icon-bar{
+    background-color: #3d9ed9;
+}
+.graph-top-tips p {
+    margin: 0;
+    line-height: 20px;
+    color: #9a9a9a;
+}
+.graph-top-unit {
+    margin: 0 .05rem;
+    line-height: 20px;
+    color: #9a9a9a;
+}
+.graph-main {
+    height: 1.7rem;
+    overflow: auto;
+    position: relative;
+  -webkit-overflow-scrolling : touch;
+}
+.graph-main .graph-content {
+    /*width: 10rem;*/
+    height: 1.7rem;
+}
+
+.graph-content-error{
+    position: absolute;
+  width: 100%;
+  height: 1.7rem;
+  font-size: .12rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: #666;
+}
+.graph-loading{
+   position: relative;
+  width: 100%;
+  height: .28rem;
+  top: .4rem;
+}
+#dayGraph{
+    width: 1400px;
+}
+#weekGraph{
+    width: 700px;
+}
+#monthGraph{
+    width: 1400px;
+}
+.statistic {} .statistic-top {
+    background: #e6e6e6;
+    font-size: .12rem;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    height: .24rem;
+    line-height: .24rem;
+    color: #555;
+}
+.statistic-main {} .statistic-main .statistic-counts {
+    height: .30rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding: .09rem 0;
+}
+.statistic-main .statistic-count {
+    height: .3rem;
+    border-right: 1px solid #dcdcdc;
+    padding: 0 .12rem;
+}
+.statistic-main .statistic-count.last-count {
+    border: none;
+}
+.statistic-main .statistic-count p {
+    margin: 0;
+    line-height: .3rem;
+    color: #9a9a9a;
+}
+.statistic-main .statistic-count p span {
+    float: right;
+    font-size: .18rem;
+    color: #f37f4c;
+}
+/*********查询页面***********/
+
+.list-bar {
+    height: .44rem;
+    border-bottom: 1px solid #b2b2b2;
+    background-color: #fff;
+}
+.list-bar-title {
+    color: #555;
+    font-size: .15rem;
+    margin: 0;
+    height: .44rem;
+    line-height: .44rem;
+    padding: 0 .1rem;
+}
+.list-bar-content {
+    color: #888;
+    font-size: .15rem;
+    height: .44rem;
+    line-height: .44rem;
+    margin: 0;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list-bar-icon{
+    width: .3rem;
+    height: .44rem;
+    position: relative;
+}
+.list-bar-icon-new-ios {
+    width: .3rem;
+    height: .34rem;
+    position: relative;
+}
+.list-bar-icon-new-Android {
+	width: .3rem;
+    height: .495rem;
+    position: relative;
+}
+.list-bar-icon span {
+    width: .2rem;
+    height: .2rem;
+    display: block;
+    position: absolute;
+    top: .12rem;
+    left: .05rem;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.21rem;
+    background-size: auto .21rem;
+    -webkit-transform:rotate(180deg);
+}
+.listBar span {
+    width: .2rem;
+    height: .2rem;
+    display: block;
+    position: absolute;
+    top: .06rem;
+    left: .05rem;
+    background: url(/h5/mobile/assets/passengers/images/left1.png) no-repeat center;
+    background-position: 0rem;
+    background-size: auto .21rem;
+} 
+/* .list-bar-icon-new span {
+    width: .2rem;
+    height: .2rem;
+    display: block;
+    position: absolute;
+    top: .12rem;
+    left: .05rem;
+    background: url(/h5/mobile/assets/passengers/images/left1.png) no-repeat center;
+    background-position: 0rem;
+    background-size: auto .21rem;
+} */
+.btn {
+    background: #ff7139;
+    color: #fff;
+    font-size: .15rem;
+    width: 2.6rem;
+    margin: .3rem auto;
+    height: .35rem;
+    border-radius: .35rem;
+    text-align: center;
+    line-height: .35rem;
+    border: none;
+}
+.btn:active{
+    background-color:#df531c;
+}
+/************设备分组列表**************/
+.error-list{
+    text-align: center;
+}
+.error-list img{
+      width: 1.1rem;
+  height: 1.1rem;
+  margin-top: .7rem;
+}
+.error-list p{
+    font-size: .15rem;
+    color:#959595;
+}
+
+.group-list {} .group-list-bar {
+    height: .44rem;
+    border-bottom: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+.group-list-arrow {
+    width: .35rem;
+    height: .44rem;
+    position: relative;
+}
+.group-list-arrow span {
+    width: .2rem;
+    height: .2rem;
+    display: block;
+    position: absolute;
+    top: .11rem;
+    left: .05rem;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.21rem;
+    background-size: auto .21rem;
+    -webkit-transition: all .3s ease-in-out;
+}
+.group-list.open .group-list-arrow span{
+    -webkit-transform:rotate(-90deg);
+}
+.group-list-title {
+    color: #555;
+    font-size: .15rem;
+    margin: 0;
+    height: .44rem;
+    line-height: .44rem;
+}
+.group-list-check {
+    width: .44rem;
+    height: .44rem;
+    position: relative;
+}
+.group-list-check span {
+    width: .2rem;
+    height: .2rem;
+    display: none;
+    position: absolute;
+    top: .12rem;
+    left: .12rem;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.45rem;
+    background-size: auto .21rem;
+}
+.group-list.active .group-list-check span{
+    display: block;
+}
+
+.group-list-content {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .3s ease-in-out;
+} 
+.group-list.open .group-list-content{
+}
+.equip-list {
+    height: .7rem;
+    padding: .05rem 0;
+    border-bottom: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+.equip-list:active {
+    background-color: #f0f0f3;
+}
+.equip-list-img {
+    display: block;
+    width: 1rem;
+    height: .7rem;
+    border: none;
+    margin: 0 .05rem;
+}
+.equip-list-detail {
+    margin: 0 .07rem;
+    padding: .1rem 0;
+}
+.equip-list-title {
+    font-size: .15rem;
+    color: #555;
+    margin: 0;
+    height: .25rem;
+    line-height: .25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.equip-list-des {
+    font-size: .15rem;
+    color: #888;
+    margin: 0;
+    height: .25rem;
+    line-height: .25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.equip-list-check {
+    width: .44rem;
+    height: .44rem;
+    position: relative;
+    padding: .13rem 0;
+}
+.equip-list-check span {
+    width: .2rem;
+    height: .2rem;
+    display: none;
+    position: absolute;
+    top: .25rem;
+    left: .12rem;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;
+    background-position: -.45rem;
+    background-size: auto .21rem;
+}
+.equip-list.active .equip-list-check span{
+    display: block;
+}
+
+
+#equipConfirm.disable{
+    pointer-events: none;
+        background-color: #ececec;
+    border-color: #ececec;
+    color: #b5b9bc;
+}
+/*******************日历*******************/
+.ui-calendar{
+    background: #fff;
+}
+.ui-calendar .ui-calendar-header{
+    height: .55rem;
+    font-size: .15rem;
+    position: relative;
+} 
+.ui-calendar .ui-calendar-header .ui-calendar-prev{
+    width: .25rem;      
+    height: .55rem;      display: block;      position: absolute;                  
+    left: 1.2rem;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;      
+    background-position: -0.25rem;      
+    background-size: auto .25rem;
+    color: rgba(0,0,0,0);
+} 
+.ui-calendar .ui-calendar-header .ui-calendar-title{
+    height: .54rem;
+    line-height: .54rem;
+    font-size: 0.15rem;
+    color: #555;
+} 
+.ui-calendar .ui-calendar-header .ui-calendar-title .ui-calendar-year{
+    display: block;
+    width: .8rem;
+    text-align: center;
+    float: left;
+}
+.ui-calendar .ui-calendar-header .ui-calendar-title .ui-calendar-month{
+    width: 2.4rem;
+    display: block;
+    text-align: center;
+    float: left;
+}
+.ui-calendar .ui-calendar-header .ui-calendar-next{
+    width: .25rem;    height: .55rem;    display: block;    position: absolute;    
+    right: .4rem;    top: 0;
+    background: url(/h5/mobile/assets/passengers/images/icons.png) no-repeat center;    background-position: -0.25rem;    
+    -webkit-transform: rotate(180deg);
+    background-size: auto .25rem;    color: rgba(0,0,0,0);
+} 
+
+.ui-calendar .ui-calendar-calendar{
+    font-size: .15rem;
+    width: 100%;
+}
+.ui-calendar .ui-calendar-calendar thead{
+}
+.ui-calendar .ui-calendar-calendar thead tr{
+    height: .27rem;
+    background: #f9f9f9;
+    border-spacing: 0;
+}
+.ui-calendar .ui-calendar-calendar thead tr th{
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.ui-calendar .ui-calendar-calendar thead tr th.ui-calendar-week-end{}
+.ui-calendar .ui-calendar-calendar thead tr th span{
+    color: #888;
+}
+
+.ui-calendar .ui-calendar-calendar tbody{}
+.ui-calendar .ui-calendar-calendar tbody tr{
+}
+.ui-calendar .ui-calendar-calendar tbody tr td{
+    vertical-align: middle;
+    text-align: center;
+    height: .46rem;
+    position: relative;
+}
+.ui-calendar .ui-calendar-calendar tbody tr.ui-calendar-gap td{
+    line-height: .1rem;
+    padding: 0;
+    height: .1rem;
+}
+.ui-calendar .ui-calendar-calendar tbody tr td.ui-calendar-unSelectable{
+    color:#ccc;
+}
+.ui-calendar .ui-calendar-calendar tbody tr td.ui-state-disabled{
+    color:#ccc;
+}
+.ui-calendar .ui-calendar-calendar tbody tr td a.ui-state-default{
+    color: #555;
+}
+.ui-calendar .ui-calendar-calendar tbody tr td.ui-calendar-today a{
+    background: #1b9ee2;
+    height: .34rem;
+    width: .34rem;
+    position: absolute;
+    top: .06rem;
+    left: .06rem;
+    border-radius: .34rem;
+    color: #fff;
+    line-height: .34rem;
+}
+.ui-calendar .ui-calendar-calendar tbody tr td.ui-calendar-current-day a{
+    background: #ff7139;
+    height: .34rem;
+    width: .34rem;
+    position: absolute;
+    top: .06rem;
+    left: .06rem;
+    border-radius: .34rem;
+    color: #fff;
+    line-height: .34rem;
+} 
+
+#loading {
+  position: absolute;
+  z-index:100;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+#loading span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: -70.5px auto auto -73px;
+  width: 146px;
+  height: 141px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#loading span img {
+  display: block;
+  margin: 46.5px auto auto 49px;
+  width: 48px;
+  height: 48px;
+  -webkit-animation: loading 2.5s linear 0s infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
